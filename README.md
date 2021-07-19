@@ -143,9 +143,9 @@ top_schools
 
 ## Summary
 In summary, the four main changes that occurred to Thomas High School statistics after its ninth graders were excluded from the data were:
-    - % Passing Math, % Passing Reading, and % Overall Passing changed dramatically relative to itself.
-    - Ranking among its sister charter schools fell from 2nd to 8th place.
-    - Per School Capita scores, in general, fell for the $630-$644 spending bin.
-    - Charter School overall scores fell because of Thomas High School's decreased percentage figures.
+- % Passing Math, % Passing Reading, and % Overall Passing changed dramatically relative to itself.
+- Ranking among its sister charter schools fell from 2nd to 8th place.
+- Per School Capita scores, in general, fell for the $630-$644 spending bin.
+- Charter School overall scores fell because of Thomas High School's decreased percentage figures.
     
 In ending, it is probable that there was some academic dishonesty that took place according to the data visuals generated, but more investigating is needed to determine the root cause of the dramatic improvements of students within Thomas High Schools freshman class.
