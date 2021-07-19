@@ -3,9 +3,9 @@
 ## Project Overview
 A school board notified a client that there were signs of academic dishonesty among the ninth grade students at Thomas High School and has given me the responsibility of analyzing the data to see if these allegations are true. The main approach that I will use is to replace all of the ninth grade reading and math scores with null values to see if the ranking of the school changes among its sister schools and if the average score changes significantly.
 
-### Findings After Analysis
+## Findings After Analysis
 
-#### How is the district summary affected?
+### How is the district summary affected?
 To begin, I used a code that would remove the ninth graders from the data and replace their math and reading scores with NaN's:
 
 ```
@@ -41,7 +41,7 @@ Initially, it appears that there was little change when it comes to comparing th
 
 However, upon further reflection, it must be noted that the ninth graders within Thomas High School are only 461 students out of 39,170, or 1.1% of the student population. Upon taking their numbers out of the student count, the figures either remained the same or dropped.
 
-#### How is the school summary affected?
+### How is the school summary affected?
 To begin this stage of the analysis, I had to isolate the 10th, 11th, and 12th graders so that the 9th grade scoers did not affect the analysis so I used this code for the final tally:
 
 ```
@@ -79,7 +79,7 @@ This is where the grades become a little more suspicious among the ninth grade s
 
 When the ninth graders are removed, the school's performance suffers heavily by experiencing an approximate drop of 23%, 28%, and 25% in math, reading, and overall passing percent, respectively. In addition, while these figures increase dramatically, the  average grade for these subjects barely change.
 
-#### How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
+### How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
 When it comes to examining the performance of the school district, in terms of "% Overall Passing", Thomas High School once again suffers heavily when taking its ninth graders out of the picture. 
 
 ![Perf_Before](https://user-images.githubusercontent.com/46951897/126098156-8400817e-2fd9-42e2-942d-baf10c16e170.JPG)
@@ -100,8 +100,13 @@ top_schools = per_school_summary_df.sort_values(["% Overall Passing"], ascending
 top_schools
 ```
 
-#### How does replacing the ninth-grade scores affect the following:
+### How does replacing the ninth-grade scores affect the following:
   - Math and reading scores by grade: The grades are relatively unaffected since only the ninth graders for Thomas High School are excluded.
+
+![grades_before](https://user-images.githubusercontent.com/46951897/126101998-7b8fc233-aaf4-4870-a23e-54eaa2c8d20f.JPG)
+
+![grades_after](https://user-images.githubusercontent.com/46951897/126101999-5227ba3d-0c6e-4a3b-ae7e-1ed964fc6bea.JPG)
+
   - Scores by school spending:The only score affected in this category is the $630-$644 per student spending bin. The changes observable are slight decreases within the Average Math Score, Average Reading Score, and % Passing Math; but larger changes are observed in % Passing Reading and % Overall Passing where post-exclusion of the ninth graders results in a 0.08% drop in both figures, compared to the 0.01% decrease in the others.
 
 ![Spend_Before](https://user-images.githubusercontent.com/46951897/126099282-f8508d0c-2083-477f-b3ec-c1aad3869fa9.JPG)
@@ -120,24 +125,11 @@ top_schools
 
 ![Sco_Type_After](https://user-images.githubusercontent.com/46951897/126100504-be91182f-fb35-427e-b709-485f4b868d4c.JPG)
 
-Summary: Summarize four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.
-
-Deliverable 3 Requirements
-Structure, Organization, and Formatting (7 points)
-The written analysis has the following structure, organization, and formatting:
-
-There is a title, and there are multiple sections (2 pt).
-Each section has a heading and subheading (3 pt).
-Links to images are working, and code is formatted and displayed correctly (2 pt).
-Analysis (18 points)
-The written analysis has the following:
-
-Overview of the school district analysis:
-
-The purpose of this analysis is well defined (3 pt).
-Results:
-
-There is a bulleted list that addresses how each of the seven school district metrics was affected by the changes in the data (10 pt).
-Summary:
-
-There is a statement summarizing four changes to the school district analysis after reading and math scores have been replaced (5 pt).
+## Summary
+In summary, the four main changes that occurred to Thomas High School statistics after its ninth graders were excluded from the data were:
+    - % Passing Math, % Passing Reading, and % Overall Passing changed dramatically relative to itself.
+    - Ranking among its sister charter schools fell from 2nd to 8th place.
+    - Per School Capita scores, in general, fell for the $630-$644 spending bin.
+    - Charter School overall scores fell because of Thomas High School's decreased percentage figures.
+    
+In ending, it is probable that there was some academic dishonesty that took place according to the data visuals generated, but more investigating is needed to determine the root cause of the dramatic improvements of students within Thomas High Schools freshman class.
